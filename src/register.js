@@ -1,33 +1,36 @@
 import { useState } from "react";
 import "./register.css";
 
-
 const sendRegistration = async (data) => {
   try {
+    console.log("🚀 Sending registration data:", data);
+
     const response = await fetch("https://backend-esc.onrender.com/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
+      mode: "cors",
       body: JSON.stringify(data),
     });
 
-    const result = await response.json();
+    console.log("📡 Response status:", response.status);
 
-    if (!response.ok) {
-      return {
-        success: false,
-        error: result.error || "Failed to register user",
-        status: response.status,
-      };
+    // Try to parse JSON safely
+    const contentType = response.headers.get("content-type");
+    let result = {};
+    if (contentType && contentType.includes("application/json")) {
+      result = await response.json();
+    } else {
+      result = { message: await response.text() };
     }
 
-    console.log("✅ User registered successfully");
-    return {
-      success: true,
-      data: result,
-      message: "Registration successful",
-    };
+    if (response.ok) {
+      return { success: true, data: result };
+    } else {
+      return { success: false, error: result.message || "Registration failed" };
+    }
   } catch (error) {
     console.error("❌ Network error:", error);
     return {
@@ -39,101 +42,129 @@ const sendRegistration = async (data) => {
 };
 
 export default function Register() {
-  // state for all inputs
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [department, setDepartment] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async () => {
-    const result = await sendRegistration({
-      firstName,
-      lastName,
-      email,
-      phone,
-      department,
-      message,
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    if (result.success) {
-      alert("✅ Registration successful!");
-      // clear form after success
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setPhone("");
-      setDepartment("");
-      setMessage("");
-    } else {
-      alert("❌ " + result.error);
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const result = await sendRegistration({
+        FirstName: firstName,
+        LastName: lastName,
+        email: email,
+        phoneNumber: phone,
+        Department: department,
+        motivation: message,
+      });
+
+      if (result.success) {
+        alert("✅ Registration successful!");
+        // Reset form
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setDepartment("");
+        setMessage("");
+      } else {
+        alert("❌ " + result.error);
+        console.error("Registration failed:", result);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("❌ An unexpected error occurred");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div className="register">
-      <h2 className="lider">JOIN ESC</h2>
-      <p className="amine">Where Curiosity Meets Community</p>
-
-      <div className="f_input">
-        <input
+      <h2 className='lider'>JOIN ESC</h2>
+      <p className='amine'>Where Curiosity Meets Community</p>
+      
+      <form onSubmit={handleSubmit}>
+        <div className='f_input'>
+          <input 
+            required 
+            type='text' 
+            placeholder="First name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            disabled={isSubmitting}
+          />
+          <input 
+            required 
+            type='text' 
+            placeholder="Last name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            disabled={isSubmitting}
+          />
+        </div>
+        
+        <div className='f_input'>
+          <input 
+            required 
+            type='email' 
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={isSubmitting}
+          />
+          <input 
+            required 
+            type='tel' 
+            placeholder="phone number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            disabled={isSubmitting}
+          />
+        </div>
+        
+        <select 
           required
-          type="text"
-          placeholder="First name"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
+          value={department}
+          onChange={(e) => setDepartment(e.target.value)}
+          disabled={isSubmitting}
+        >
+          <option value="" disabled hidden>Select your choice</option>
+          <option value="dev">Dev</option>
+          <option value="design">Design</option>
+          <option value="hr">Human Resources</option>
+          <option value="events">Events</option>
+        </select>
+        
+        <textarea 
+          required 
+          placeholder="say something"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          disabled={isSubmitting}
         />
-        <input
-          required
-          type="text"
-          placeholder="Last name"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-        />
-      </div>
-
-      <div className="f_input">
-        <input
-          required
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          required
-          type="tel"
-          placeholder="Phone number"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
-      </div>
-
-      <select
-        required
-        value={department}
-        onChange={(e) => setDepartment(e.target.value)}
-      >
-        <option value="" disabled hidden>
-          Select your choice
-        </option>
-        <option value="dev">Dev</option>
-        <option value="design">Design</option>
-        <option value="hr">Human Resources</option>
-        <option value="production">Production</option>
-      </select>
-
-      <textarea
-        required
-        placeholder="Say something"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      ></textarea>
-
-      <button className="join" onClick={handleSubmit}>
-        <p>REGISTER</p>
-      </button>
+        
+        <button 
+          className='join' 
+          type="submit"
+          disabled={isSubmitting}
+        >
+          <p>{isSubmitting ? "REGISTERING..." : "REGISTER"}</p>
+        </button>
+      </form>
     </div>
   );
 }
+
+
+
+
