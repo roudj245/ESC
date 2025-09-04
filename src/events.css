@@ -83,4 +83,8 @@ animation-range: entry 0% cover 60%;
     .events-container{
         margin-top:100px;
     }
+    .event-card{
+        height:280px;
+        width:350px;
+    }
 }
