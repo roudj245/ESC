@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+
+@keyframes fadeSlideUp {
+0% {
+    opacity: 0;
+    transform: translateY(30px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+
+.introduction {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    animation: fadeSlideUp  ease forwards ; 
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 50%;
+    
+}
+
+.ih{
+    width:650px;
+}
+
+
+.text2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0px;
+    animation: fadeSlideUp  ease forwards;
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 50%;
+}
+
+
+.text2 p {
+    color: white;
+    font-size: 24px;
+    font-weight: 300; 
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    animation: fadeSlideUp  ease forwards;
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 50%;
+    animation-delay: 0.3s;
+    transition: transform 0.3s ease;
+}
+
+
+.text2 p:hover {
+    transform: scale(1.05);
+}
+
+
+.left2 h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0px;
+    opacity: 0;
+    animation: fadeSlideUp  ease forwards;
+    animation-delay: 0.2s;
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 50%;
+}
+
+
+.introduction p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    animation: fadeSlideUp  ease forwards;
+    animation-delay: 0.2s;
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 40%;
+}
+
+
+.left2 {
+    color: white;
+}
+
+/* Responsive Styles - Only affects screens smaller than 1200px */
+@media screen and (max-width: 1200px) {
+    .introduction {
+        height: auto;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    
+    .text2 {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .text2 p {
+        font-size: 1.25rem;
+    }
+    
+    .left2 h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .introduction {
+        padding: 2rem 1.5rem;
+    }
+    .ih{
+    width:350px;
+}
+    
+    .text2 p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        line-height: 1.7;
+        margin: 1rem 0;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .left2 h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+        color: #fff;
+    }
+    
+    .introduction > p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        letter-spacing: 0.2px;
+        margin: 1.5rem 0;
+        color: rgba(255, 255, 255, 0.85);
+    }
+    
+    /* Hide the flech */
+    .text2 img {
+        display: none;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+    .introduction {
+        padding: 1.5rem 1rem;
+    }
+    
+    .text2 p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        line-height: 1.7;
+        margin: 0.8rem 0;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .left2 h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+    
+    .introduction > p {
+        font-size: 1rem;
+        line-height: 1.7;
+        letter-spacing: 0.1px;
+        margin: 1.2rem 0;
+        color: rgba(255, 255, 255, 0.85);
+    }
+}
+

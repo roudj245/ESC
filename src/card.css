@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.all{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; 
+    
+    
+    animation: fadeInUp 2s ease forwards;
+    animation-timeline: view(); 
+    animation-range: entry 0 cover 60%; 
+}
+
+
+.card{
+    height: 400px;
+    width: 300px;
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+}
+
+
+.card img{
+    border-radius: 50%;
+    height:150px;
+    width:150px;
+    margin-top:-30px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+.all:hover .card {
+    transform: translateY(-20px) scale(1.05) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+
+.all:hover .card img {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    color:black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+
+.role{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+
+.Titre4{
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles - Desktop version remains unchanged above this line */
+
+/* 1200px and below - Show one card at a time */
+@media screen and (max-width: 1200px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 20px 0;
+    }
+    
+    .all {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .card {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        margin: 0 auto;
+    }
+    
+    .card h2 {
+        font-size: 26px;
+        margin: 20px 0 10px;
+    }
+    
+    .role {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    .card img {
+        height: 160px;
+        width: 160px;
+        margin-top: -30px;
+    }
+}
+
+/* 768px and below */
+@media screen and (max-width: 768px) {
+    .all {
+        max-width: 300px;
+        
+        display:flex;
+    }
+    
+    
+    
+    .card h2 {
+        font-size: 24px;
+    }
+    
+    .role {
+        font-size: 16px;
+    }
+    
+    .card img {
+        height: 140px;
+        width: 140px;
+    }
+    
+    .Titre4 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .all:hover .card {
+        transform: translateY(-10px) scale(1.02);
+    }
+}
+
+/* 480px and below */
+@media screen and (max-width: 480px) {
+    .all {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .card {
+        min-height: 420px;
+        padding: 20px 10px;
+    }
+    
+    .card h2 {
+        font-size: 22px;
+        margin: 15px 0 8px;
+    }
+    
+    .role {
+        font-size: 15px;
+    }
+    
+    .card img {
+        height: 130px;
+        width: 130px;
+        margin-top: -25px;
+    }
+    
+    .Titre4 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    
+    .all:hover .card {
+        transform: translateY(-5px) scale(1.01);
+    }
+}
+

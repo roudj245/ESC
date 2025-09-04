@@ -1,24 +1,148 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './navbar.js'
+import Home from './home.js'
+import Home2 from './home2.js'
+import Introduction from './Introduction.js'
+import About from './about.js'
+import Leaders from './leaders.js'
+import Departement from './Departement.js'
+import Design from './assets/Design.png'
+import Departement2 from './Departement2.js'
+import dev from './assets/DEV.png'
+import hr from './assets/HR.png'
+import relex from './assets/RELEX.png'
+import event from './assets/EVENT.png'
+import UpcomingEvents from './events.js'
+import Statistics from './statistics.js'
+import Register from './register.js'
+import Footer from './footer.js'
+
+
+
+const rio = [
+  {
+    place: "leader",
+    avatar: require('./assets/moundhir.jpg'),
+    name: "Roudj Abdelghani",
+    role: "Second year student at ESI Algiers",
+    skills: ["Full Stack Developer", "UI / UX designer"],
+    experience: "Over 3 Years of experience"
+  },
+  
+];
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar/>
+    <Home/>
+    <Home2/>
+    <Introduction
+    Titre= 'INTRODUCTION'
+    RIGL='TO ESC CLUB'
+
+    
+    
+    />
+    <About/>
+    <Introduction
+    Titre= 'WHY JOIN'
+    RIGL='ESC?'
+    
+    
+    />
+    <Leaders/>
+  
+  
+  <Departement2
+  title3='DEV Departement' 
+  description3={
+    <>
+      The Development Department builds and maintains digital projects. 
+      Members code websites, apps, and tools with clean, scalable logic. 
+      They organize coding sessions to improve skills and share knowledge.
+      Innovation and problem-solving are key values of this department.
+      DEV ensures all technical ideas become functional applications. 
+    </>
+  }
+  image3={dev}
+  data3={rio}
+/>
+
+<Departement
+  title2='DESIGN Departement' 
+  description2={
+    <>
+      The Design Department focuses on visuals, branding, and identity. 
+      Members create graphics, posters, and creative digital content. 
+      They design user-friendly layouts for websites and applications. 
+      Workshops help improve skills in design tools and creativity. 
+      Their goal is to deliver beauty and clarity in every project. 
+    </>
+  }
+  image2={Design}
+  data2 ={rio}
+/>
+
+<Departement2 
+  title3='HR Departement' 
+  description3={
+    <>
+      The HR Department manages people, teamwork, and communication. 
+      They recruit new members and organize training for growth. 
+      HR builds leadership, motivation, and conflict resolution skills. 
+      The department ensures harmony between all club members. 
+      Their mission is to keep the community strong and united. 
+    </>
+  }
+  image3={hr}
+  data3 ={rio}
+/>
+
+<Departement
+  title2='RELEX Deparetemnt' 
+  description2={
+    <>
+      The RELEX Department builds partnerships with sponsors and firms. 
+      They negotiate collaborations that support projects and events. 
+      Members develop strong communication and networking abilities.
+      The department improves the club’s visibility in the community. 
+      RELEX ensures lasting connections for the club’s success. 
+    </>
+  }
+  image2={relex}
+  data2 ={rio}
+/>
+
+<Departement2 
+  title3='EVENTS Departement' 
+  description3={
+    <>
+      The Events Department creates workshops, talks, and challenges. 
+      They manage logistics, planning, and the timeline of events. 
+      Members learn organization, leadership, and creativity skills. 
+      Each event is designed to be memorable and impactful. 
+      Events bring people together and make the club dynamic. 
+    </>
+  }
+  image3={event}
+  data3={rio}
+/>
+
+
+
+    <UpcomingEvents/>
+    <Statistics/>
+    <Register/>
+    <Footer/>
+
+
+
+
+    
+    </>
+    
+    
   );
 }
 
