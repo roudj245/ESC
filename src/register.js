@@ -4,12 +4,12 @@ import "./register.css";
 const sendRegistration = async (data) => {
   try {
     console.log("🚀 Sending registration data:", data);
-
+    
     const response = await fetch("https://backend-esc.onrender.com/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
+        "Accept": "application/json",
       },
       mode: "cors",
       body: JSON.stringify(data),
@@ -17,25 +17,44 @@ const sendRegistration = async (data) => {
 
     console.log("📡 Response status:", response.status);
 
-    // Try to parse JSON safely
     const contentType = response.headers.get("content-type");
-    let result = {};
-    if (contentType && contentType.includes("application/json")) {
-      result = await response.json();
-    } else {
-      result = { message: await response.text() };
+    if (!contentType || !contentType.includes("application/json")) {
+      const text = await response.text();
+      console.error("❌ Non-JSON response:", text);
+      throw new Error("Server returned non-JSON response");
     }
 
-    if (response.ok) {
-      return { success: true, data: result };
-    } else {
-      return { success: false, error: result.message || "Registration failed" };
+    const result = await response.json();
+    console.log("📦 Response data:", result);
+
+    if (!response.ok) {
+      return {
+        success: false,
+        error: result.error || result.message || "Failed to register user",
+        status: response.status,
+      };
     }
+
+    console.log("✅ User registered successfully:", result);
+    return {
+      success: true,
+      data: result,
+      message: "Registration successful",
+    };
   } catch (error) {
     console.error("❌ Network error:", error);
+    
+    if (error.name === 'TypeError' && error.message.includes('fetch')) {
+      return {
+        success: false,
+        error: "Unable to connect to server. Please check if the server is running.",
+        networkError: true,
+      };
+    }
+    
     return {
       success: false,
-      error: "Network error. Please check your connection.",
+      error: error.message || "Network error. Please check your connection.",
       networkError: true,
     };
   }
@@ -52,9 +71,9 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     if (isSubmitting) return;
-
+    
     setIsSubmitting(true);
 
     try {
@@ -141,7 +160,7 @@ export default function Register() {
           <option value="" disabled hidden>Select your choice</option>
           <option value="dev">Dev</option>
           <option value="design">Design</option>
-          <option value="hr">Human Resources</option>
+          <option value="hr">human resources</option>
           <option value="events">Events</option>
         </select>
         
@@ -164,7 +183,3 @@ export default function Register() {
     </div>
   );
 }
-
-
-
-
