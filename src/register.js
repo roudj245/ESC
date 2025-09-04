@@ -4,7 +4,7 @@ import "./register.css";
 
 const sendRegistration = async (data) => {
   try {
-    const response = await fetch("https://backend-esc.onrender.com/api/user", {
+    const response = await fetch("https://backend-esc.onrender.com/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
