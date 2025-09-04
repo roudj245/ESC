@@ -87,4 +87,11 @@ animation-range: entry 0% cover 60%;
         height:280px;
         width:350px;
     }
+    .event-wrapper.left {
+        justify-content: center;
+        }
+        
+        .event-wrapper.right {
+        justify-content: center;
+        }
 }

@@ -140,11 +140,12 @@
 @media screen and (max-width: 768px) {
     .about {
         flex-direction: column;
-        padding: 3rem 1.5rem;
+        justify-content: space-around;
+        align-items: center;
         text-align: center;
     }
     .lala{
-    width:420px; 
+    width:360px; 
 }
 
     
