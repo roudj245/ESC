@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
-
+html {
+  scroll-behavior: smooth;
+}
 .navbar{
     height: 100px;
     width : 100%;
@@ -88,7 +90,7 @@
     font-weight: bold;
 }
 .join:hover{
-    background-color: #000000; 
+    background-color: transparent; 
     transform: translateY(-3px); 
 }
 .join:hover p{

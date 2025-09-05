@@ -88,19 +88,13 @@ export default function Register() {
       });
 
       if (result.success) {
-        // Show success animation
         setShowSuccess(true);
-        
-        // Reset form after a delay
-        setTimeout(() => {
-          setFirstName("");
-          setLastName("");
-          setEmail("");
-          setPhone("");
-          setDepartment("");
-          setMessage("");
-          setShowSuccess(false);
-        }, 3000);
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setDepartment("");
+        setMessage("");
       } else {
         alert("❌ " + result.error);
         console.error("Registration failed:", result);
@@ -124,7 +118,6 @@ export default function Register() {
             <div className="checkmark"></div>
           </div>
           <h3 className="success-title">Registration Successful!</h3>
-          <p className="success-message">Welcome to ESC! We'll be in touch soon.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -188,7 +181,7 @@ export default function Register() {
           />
           
           <button 
-            className='join' 
+            className='join1' 
             type="submit"
             disabled={isSubmitting}
           >

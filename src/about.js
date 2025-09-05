@@ -4,22 +4,14 @@ import Mask from './assets/Mask.png'
 
 function About(){
     return(
-        <div className='about'>
+        <div id ='about' className='about'>
         <img src ={Mask} alt =''></img>
         <div className="right2">
             <h1>ABOUT</h1>
             <p className='esc'>ESC CLUB</p>
             <div className='lala'>
             <p className='para'>
-                Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus 
-                urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida 
-                dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. 
-                Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet 
-                sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam 
-                etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet 
-                cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha 
-                retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi 
-                n tempor.
+                Founded in Cherchell, the ESC Club is a student-led scientific association dedicated to promoting curiosity, collaboration, and innovation. We organize conferences, workshops, and competitions across various scientific fields, offering members the chance to learn, experiment, and share knowledge. The club also serves as a bridge between students and the professional world, encouraging research, creativity, and teamwork while fostering a spirit of scientific excellence within our community.
             </p>
             </div>
             <button>

@@ -13,16 +13,8 @@
     margin-top:100px;
 }
 
-/* Add missing .lider styling */
-.lider {
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 700;
-    font-size: 48px;
-    color: white;
-    text-align: center;
-    margin: 0;
-    letter-spacing: 2px;
-}
+
+
 
 .f_input input {
     height:72px;
@@ -45,7 +37,7 @@
     gap:20px;
 }
 
-/* Fix placeholder styling */
+
 .f_input input::placeholder{
     color: #888;
     text-align: left;
@@ -67,7 +59,6 @@
     cursor: pointer;
 }
 
-/* Add select option styling */
 .register select option {
     background-color: black;
     color: white;
@@ -88,28 +79,30 @@ textarea {
     outline: none;
 }
 
-/* Fix textarea placeholder */
+
 textarea::placeholder {
     color: #888;
 }
 
-/* Add missing button styles */
+
 .register button{
     color: rgb(0, 0, 0);
     background-color: white;
-    border: none;
+    border-color: white;border-style: solid;
     border-radius: 25px;
     padding: 15px 30px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .register button:hover:not(:disabled) {
-    background-color: #f0f0f0;
+    background-color: #000000;
     transform: translateY(-2px);
+    color: white;
+    border-color: white ;
 }
 
 .register button:disabled {
@@ -133,7 +126,7 @@ textarea::placeholder {
     margin: 0;
 }
 
-/* Add form styling */
+
 .register form {
     display: flex;
     flex-direction: column;
@@ -144,7 +137,6 @@ textarea::placeholder {
 
 
 
-/* Success Animation Styles - Add these to your register.css file */
 
 .success-animation {
   display: flex;
@@ -237,7 +229,7 @@ textarea::placeholder {
   }
 }
 
-/* Responsive design for success animation */
+
 @media (max-width: 768px) {
   .success-animation {
     padding: 40px 15px;
@@ -265,9 +257,9 @@ textarea::placeholder {
   }
 }
 
-/* Responsive Styles */
 
-/* Laptop (1200px and below) */
+
+
 @media screen and (max-width: 1200px) {
     .register select,
     textarea {

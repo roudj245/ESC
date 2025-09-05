@@ -12,17 +12,17 @@ function Home2(){
                 <div className='black'>
                     <Section
                     title1="Pay Us a Visit"
-                    description="Union St, Seattle, WA 98101, United States"
+                    description="centre ville cherchell"
                     image={pic3}
                     />
                     <Section
                     title1="Give Us a Call"
-                    description="(110) 1111-1010" 
+                    description="0553314664" 
                     image={pic2}
                     />
                     <Section
                     title1="Send Us a Message"
-                    description="Contact@HydraVTech.com"
+                    description="epstimisignum@gmail.com"
                     image={pic4}
                     />
                 </div>

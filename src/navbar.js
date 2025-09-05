@@ -1,25 +1,25 @@
 import './navbar.css'
 import logo from './assets/Frame.png'
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // icons
+import { Menu, X } from 'lucide-react'; 
 
 function Navbar (){
     const [isOpen, setIsOpen] = useState(false);
 
     return(
         <div className='navbar'>
-            {/* Logo */}
+           
             <div className='logo'>
                 <img src={logo} alt='le logo'></img>
                 <p>ESC</p>
             </div>
 
-            {/* Desktop Links */}
             <div className='sections'>
-                <a href=''>ABOUT</a>
-                <a href=''>SERVICES</a>
-                <a href=''>TECHNOLOGIES</a>
-                <a href=''>HOW TO?</a>
+                <a href='#home'>HOME</a>
+                <a href='#about'>ABOUT</a>
+                <a href='#leaders'>LEADERS</a>
+                <a href=''>DEPARTEMENTS</a>
+               <a href=''>UP-EVENTS</a>
             </div>
 
             {/* Desktop Buttons */}
@@ -39,10 +39,11 @@ function Navbar (){
 
            {/* Sidebar (Mobile) */}
 <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+    <a href=''>HOME</a>
     <a href=''>ABOUT</a>
-    <a href=''>SERVICES</a>
-    <a href=''>TECHNOLOGIES</a>
-    <a href=''>HOW TO?</a>
+    <a href=''>LEADERS</a>
+    <a href=''>DEPARTEMENTS</a>
+    <a href=''>UP-EVENTS</a>
     <button className='contact'>
         <p>CONTACT US</p>
     </button>

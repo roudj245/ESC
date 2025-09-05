@@ -2,7 +2,7 @@ import './introduction.css'
 import fleche from './assets/fleche.png'
 
 
-function Introduction({Titre,RIGL}){
+function Introduction({Titre,RIGL,fa9ra}){
     return(
         <div className='introduction'>
             <div className='left2'>
@@ -13,10 +13,7 @@ function Introduction({Titre,RIGL}){
                 </div>
             </div>
         <div className='ih'>
-        <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
-        nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo 
-        quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare 
-        lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae</p>
+        <p>{fa9ra}</p>
         </div>
         </div>
 

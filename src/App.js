@@ -27,6 +27,14 @@ const rio = [
     skills: ["Full Stack Developer", "UI / UX designer"],
     experience: "Over 3 Years of experience"
   },
+   {
+    place: "co-leader",
+    avatar: require('./assets/pic3.jpg'),
+    name: "Roudj Abdelghani",
+    role: "Second year student at ESI Algiers",
+    skills: ["Full Stack Developer", "UI / UX designer"],
+    experience: "Over 3 Years of experience"
+  },
   
 ];
 
@@ -40,6 +48,9 @@ function App() {
     <Introduction
     Titre= 'INTRODUCTION'
     RIGL='TO ESC CLUB'
+    fa9ra='ESC Club is a scientific student community in Cherchell that gathers young minds passionate about science, technology, and innovation.
+We organize workshops, projects, and events to encourage creativity and teamwork.
+Our mission is to transform curiosity into knowledge and knowledge into impactful ideas..'
 
     
     
@@ -48,6 +59,7 @@ function App() {
     <Introduction
     Titre= 'WHY JOIN'
     RIGL='ESC?'
+    fa9ra='Joining ESC Club means becoming part of a community that values knowledge, creativity, and teamwork. We provide opportunities to grow through scientific projects, workshops, and competitions that sharpen both technical and soft skills. Members benefit from collaboration, networking, and real-world experience that go beyond the classroom. At ESC, you don’t just learn science — you live it and share it with others.'
     
     
     />
@@ -132,7 +144,6 @@ function App() {
 
 
     <UpcomingEvents/>
-    <Statistics/>
     <Register/>
     <Footer/>
 
