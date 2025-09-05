@@ -68,6 +68,7 @@ export default function Register() {
   const [department, setDepartment] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -87,14 +88,19 @@ export default function Register() {
       });
 
       if (result.success) {
-        alert("✅ Registration successful!");
-        // Reset form
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setPhone("");
-        setDepartment("");
-        setMessage("");
+        // Show success animation
+        setShowSuccess(true);
+        
+        // Reset form after a delay
+        setTimeout(() => {
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setPhone("");
+          setDepartment("");
+          setMessage("");
+          setShowSuccess(false);
+        }, 3000);
       } else {
         alert("❌ " + result.error);
         console.error("Registration failed:", result);
@@ -112,74 +118,84 @@ export default function Register() {
       <h2 className='lider'>JOIN ESC</h2>
       <p className='amine'>Where Curiosity Meets Community</p>
       
-      <form onSubmit={handleSubmit}>
-        <div className='f_input'>
-          <input 
-            required 
-            type='text' 
-            placeholder="First name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            disabled={isSubmitting}
-          />
-          <input 
-            required 
-            type='text' 
-            placeholder="Last name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            disabled={isSubmitting}
-          />
+      {showSuccess ? (
+        <div className="success-animation">
+          <div className="checkmark-circle">
+            <div className="checkmark"></div>
+          </div>
+          <h3 className="success-title">Registration Successful!</h3>
+          <p className="success-message">Welcome to ESC! We'll be in touch soon.</p>
         </div>
-        
-        <div className='f_input'>
-          <input 
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <div className='f_input'>
+            <input 
+              required 
+              type='text' 
+              placeholder="First name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              disabled={isSubmitting}
+            />
+            <input 
+              required 
+              type='text' 
+              placeholder="Last name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              disabled={isSubmitting}
+            />
+          </div>
+          
+          <div className='f_input'>
+            <input 
+              required 
+              type='email' 
+              placeholder="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={isSubmitting}
+            />
+            <input 
+              required 
+              type='tel' 
+              placeholder="phone number"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              disabled={isSubmitting}
+            />
+          </div>
+          
+          <select 
+            required
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+            disabled={isSubmitting}
+          >
+            <option value="" disabled hidden>Select your choice</option>
+            <option value="dev">Dev</option>
+            <option value="design">Design</option>
+            <option value="hr">human resources</option>
+            <option value="events">Events</option>
+          </select>
+          
+          <textarea 
             required 
-            type='email' 
-            placeholder="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            placeholder="say something"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             disabled={isSubmitting}
           />
-          <input 
-            required 
-            type='tel' 
-            placeholder="phone number"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+          
+          <button 
+            className='join' 
+            type="submit"
             disabled={isSubmitting}
-          />
-        </div>
-        
-        <select 
-          required
-          value={department}
-          onChange={(e) => setDepartment(e.target.value)}
-          disabled={isSubmitting}
-        >
-          <option value="" disabled hidden>Select your choice</option>
-          <option value="dev">Dev</option>
-          <option value="design">Design</option>
-          <option value="hr">human resources</option>
-          <option value="events">Events</option>
-        </select>
-        
-        <textarea 
-          required 
-          placeholder="say something"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          disabled={isSubmitting}
-        />
-        
-        <button 
-          className='join' 
-          type="submit"
-          disabled={isSubmitting}
-        >
-          <p>{isSubmitting ? "REGISTERING..." : "REGISTER"}</p>
-        </button>
-      </form>
+          >
+            <p>{isSubmitting ? "REGISTERING..." : "REGISTER"}</p>
+          </button>
+        </form>
+      )}
     </div>
   );
 }
