@@ -15,6 +15,7 @@ import UpcomingEvents from './events.js'
 import Statistics from './statistics.js'
 import Register from './register.js'
 import Footer from './footer.js'
+import Card2 from './slider.js'
 
 
 
@@ -145,6 +146,9 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
 
     <UpcomingEvents/>
     <Register/>
+    <Card2
+    data = {rio}
+    />
     <Footer/>
 
 

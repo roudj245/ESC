@@ -30,7 +30,7 @@ return (
         <button className='btn' onClick={() => setShowSection2(false)}>
         <img src={foto} alt='' />
         </button>
-         <Card data={data3} />
+        <Card data={data3} />
     </div>
     </div>
 );

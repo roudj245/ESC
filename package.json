@@ -11,6 +11,7 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-scripts": "5.0.1",
+    "swiper": "^11.2.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -25,22 +26,20 @@
       "react-app/jest"
     ]
   },
-  
-"browserslist": {
-  "production": [
-    "last 2 versions",
-    "not dead",
-    "not op_mini all",
-    "Chrome >= 115",
-    "Edge >= 115",
-    "Safari >= 17",
-    "iOS >= 17"
-  ],
-  "development": [
-    "last 1 chrome version",
-    "last 1 firefox version",
-    "last 1 safari version"
-  ]
-}
-
+  "browserslist": {
+    "production": [
+      "last 2 versions",
+      "not dead",
+      "not op_mini all",
+      "Chrome >= 115",
+      "Edge >= 115",
+      "Safari >= 17",
+      "iOS >= 17"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
