@@ -62,8 +62,9 @@
 
 }
 .left button:hover{
-    background-color: #0DA0C8;
+    background-color: #000000;
     transform: translateY(-3px);
+    border: solid white;
 }
 
 /* Responsive Styles - Only affects screens smaller than desktop */
