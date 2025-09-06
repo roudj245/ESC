@@ -33,7 +33,7 @@ return (
 }
 function UpcomingEvents() {
 return (
-<div className="events-container">
+<div id ='events' className="events-container">
     <h2 className='lider'>Upcoming events</h2>
     <div className="events-grid">
     {events.map((event, i) => (

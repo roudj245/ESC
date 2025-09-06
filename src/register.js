@@ -108,7 +108,7 @@ export default function Register() {
   };
 
   return (
-    <div className="register">
+    <div id ='register' className="register">
       <h2 className='lider'>JOIN ESC</h2>
       <p className='amine'>Where Curiosity Meets Community</p>
       

@@ -18,18 +18,21 @@ function Navbar (){
                 <a href='#home'>HOME</a>
                 <a href='#about'>ABOUT</a>
                 <a href='#leaders'>LEADERS</a>
-                <a href=''>DEPARTEMENTS</a>
-               <a href=''>UP-EVENTS</a>
+                <a href='#departement'>DEPARTEMENTS</a>
+               <a href='#events'>UP-EVENTS</a>
             </div>
 
-            {/* Desktop Buttons */}
+            
             <div className='buttons'>
-                <button className='contact'>
+               <a href = '#footer'><button className='contact'>
                     <p>CONTACT US</p>
                 </button>
+               </a>
+                <a href='#register'>
                 <button className='join'>
                     <p>JOIN ESC</p>
                 </button>
+                </a>
             </div>
 
             {/* Mobile Menu Icon */}

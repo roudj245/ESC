@@ -15,6 +15,10 @@ html {
     position: relative;
     z-index: 100;
 }
+.buttons a{
+    text-decoration: none;
+
+}
 
 
 .sections{

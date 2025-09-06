@@ -24,7 +24,7 @@ const members4 = [
 
 function Leaders(){
     return(
-        <div className='leaders'>
+        <div id ='leaders'className='leaders'>
             <p className='lider'>OUR LEADERS</p>
                 <Card data={members4} />
             <p className='lider'>DEPARTEMENTS</p>

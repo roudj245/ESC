@@ -12,10 +12,9 @@ import hr from './assets/HR.png'
 import relex from './assets/RELEX.png'
 import event from './assets/EVENT.png'
 import UpcomingEvents from './events.js'
-import Statistics from './statistics.js'
 import Register from './register.js'
 import Footer from './footer.js'
-import Card2 from './slider.js'
+
 
 
 
@@ -28,7 +27,7 @@ const rio = [
     skills: ["Full Stack Developer", "UI / UX designer"],
     experience: "Over 3 Years of experience"
   },
-   {
+  {
     place: "co-leader",
     avatar: require('./assets/pic3.jpg'),
     name: "Roudj Abdelghani",
@@ -38,6 +37,12 @@ const rio = [
   },
   
 ];
+
+
+
+
+
+
 
 
 function App() {
@@ -66,8 +71,8 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
     />
     <Leaders/>
   
-  
-  <Departement2
+  <div id ="departement">
+  <Departement2 
   title3='DEV Departement' 
   description3={
     <>
@@ -101,7 +106,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   title3='HR Departement' 
   description3={
     <>
-      The HR Department manages people, teamwork, and communication. 
+      The Human Resources Department manages people, teamwork, and communication. 
       They recruit new members and organize training for growth. 
       HR builds leadership, motivation, and conflict resolution skills. 
       The department ensures harmony between all club members. 
@@ -116,7 +121,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   title2='RELEX Deparetemnt' 
   description2={
     <>
-      The RELEX Department builds partnerships with sponsors and firms. 
+      The external relations Department builds partnerships with sponsors and firms. 
       They negotiate collaborations that support projects and events. 
       Members develop strong communication and networking abilities.
       The department improves the club’s visibility in the community. 
@@ -128,25 +133,23 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
 />
 
 <Departement2 
-  title3='EVENTS Departement' 
+  title3='Marketing Departement' 
   description3={
     <>
-      The Events Department creates workshops, talks, and challenges. 
-      They manage logistics, planning, and the timeline of events. 
-      Members learn organization, leadership, and creativity skills. 
-      Each event is designed to be memorable and impactful. 
-      Events bring people together and make the club dynamic. 
+     The marketing department promotes the club’s vision and activities. They design campaigns, create content, and manage social media. Members develop communication, creativity, and teamwork skills. Each campaign is crafted to inspire and engage the audience. Marketing builds visibility, strengthens the club’s image, and connects it with the community.
     </>
   }
   image3={event}
   data3={rio}
 />
+</div>
 
 
 
     <UpcomingEvents/>
     <Register/>
     <Footer/>
+
 
 
 
