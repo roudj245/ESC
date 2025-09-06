@@ -146,9 +146,6 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
 
     <UpcomingEvents/>
     <Register/>
-    <Card2
-    data = {rio}
-    />
     <Footer/>
 
 
