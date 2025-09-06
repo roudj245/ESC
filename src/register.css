@@ -323,8 +323,14 @@ textarea::placeholder {
         font-size: 24px;
     }
     .register button {
-        width: 70%;
-        max-width: 150px;
+        width: 30%;
+        max-width: 100px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        
     }
 }
 
@@ -362,10 +368,11 @@ textarea::placeholder {
     
     .register button {
         width: 70%;
-        max-width: 150px;
+        max-width: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
     }
     
-    .register button p {
-        padding: 8px 15px;
-    }
 }

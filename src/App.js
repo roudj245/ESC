@@ -14,6 +14,9 @@ import event from './assets/EVENT.png'
 import UpcomingEvents from './events.js'
 import Register from './register.js'
 import Footer from './footer.js'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect} from 'react';
 
 
 
@@ -46,6 +49,15 @@ const rio = [
 
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,  // animation duration (ms)
+      once: false,     // false = animate every time you scroll
+      mirror: true     // true = animate when scrolling back up
+    });
+  }, []);
+
+
   return (
     <>
     <Navbar/>
