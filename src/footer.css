@@ -105,7 +105,7 @@ footer {
     gap: 2rem;
   }
   .qq {
-    display: none; /* supprime les séparateurs verticaux */
+    display: none; 
   }
 }
 

@@ -14,7 +14,7 @@ import vector2 from './assets/Vector 17.png'
 
 export default function Footer() {
   return (
-    <section>
+    <section id ='footer'>
       <footer>
         <ul className='maddi'>
           <li id="forchita">

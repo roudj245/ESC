@@ -19,6 +19,10 @@ html {
     text-decoration: none;
 
 }
+.sections a:hover{
+    color: #5286AE;
+    
+}
 
 
 .sections{
@@ -159,9 +163,16 @@ img {
     transition: all 0.3s ease;
 }
 
-.sidebar a:hover {
+.secs a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     padding-left: 25px; 
+}
+.secs{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap:10px;
 }
 
 

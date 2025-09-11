@@ -14,9 +14,8 @@ import event from './assets/EVENT.png'
 import UpcomingEvents from './events.js'
 import Register from './register.js'
 import Footer from './footer.js'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import React, { useEffect} from 'react';
+import { useEffect,useState } from 'react'
+import PersonnelSlider from './slider.js'
 
 
 
@@ -49,13 +48,18 @@ const rio = [
 
 
 function App() {
+const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000,  // animation duration (ms)
-      once: false,     // false = animate every time you scroll
-      mirror: true     // true = animate when scrolling back up
-    });
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); 
+    };
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
 
 
   return (
@@ -81,7 +85,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
     
     
     />
-    <Leaders/>
+   {!isMobile && <Leaders/>} 
   
   <div id ="departement">
   <Departement2 
@@ -155,6 +159,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   data3={rio}
 />
 </div>
+{isMobile && <PersonnelSlider/>} 
 
 
 
