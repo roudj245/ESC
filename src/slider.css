@@ -149,6 +149,9 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .Organisers{
+    max-height: 1900px;
+  }
   .slider-wrapper3 {
     margin: 0 auto;
     padding: 0;
