@@ -161,7 +161,7 @@
         min-height: 480px;
         width: 100%;
         padding: 15px;
-        border-radius: 25px;
+        border-radius: 35px;
         margin: 0 auto;
     }
     
@@ -177,8 +177,8 @@
     }
     
     .card img {
-        height: 130px;
-        width: 130px;
+        height: 140px;
+        width: 140px;
         margin-top: -25px;
     }
     
