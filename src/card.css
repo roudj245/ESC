@@ -150,6 +150,10 @@
         
         display:flex;
     }
+    .card{
+        min-height: 530px;
+        width: 100%;
+    }
     
     
     
