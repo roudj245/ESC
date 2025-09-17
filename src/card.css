@@ -10,6 +10,7 @@
     padding: 20px;
 }
 
+
 .all{
     display:flex;
     flex-direction: column;
@@ -149,7 +150,6 @@
         gap: 30px;
         padding: 15px 10px;
     }
-    
     .all {
         max-width: 320px;
         width: 100%;
@@ -158,7 +158,7 @@
     }
     
     .card {
-        min-height: 480px;
+        min-height: 520px;
         width: 100%;
         padding: 15px;
         border-radius: 35px;

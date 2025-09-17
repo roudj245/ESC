@@ -69,6 +69,10 @@ export default function Register() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const[level , setLevel] = useState("");
+  const[date , setDate] = useState("");
+  const[role , setRole] = useState("");
+  const [customLevel,setCustomLevel] =useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -85,6 +89,10 @@ export default function Register() {
         phoneNumber: phone,
         Department: department,
         motivation: message,
+        Level : level,
+        Date : date,
+        Role : role,
+        CustomLevel : customLevel,
       });
 
       if (result.success) {
@@ -95,6 +103,10 @@ export default function Register() {
         setPhone("");
         setDepartment("");
         setMessage("");
+        setLevel("");
+        setDate("");
+        setRole("");
+        setCustomLevel("");
       } else {
         alert("❌ " + result.error);
         console.error("Registration failed:", result);
@@ -158,23 +170,79 @@ export default function Register() {
               disabled={isSubmitting}
             />
           </div>
+          <div className='f_input'>
+            <input 
+              required 
+              type='date' 
+              placeholder="date de naissance"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              disabled={isSubmitting}
+            />
+      <div className="ana">
+      {level !== "other" ? (
+        <select
+          className="select2"
+          required
+          value={level}
+          onChange={(e) => setLevel(e.target.value)}
+        >
+          <option value="" disabled hidden>
+            What is your level of study?
+          </option>
+          <option value="1st">1st year High School</option>
+          <option value="2nd">2nd year High School</option>
+          <option value="3rd">3rd year High School</option>
+          <option value="bachelor1">1st year Bachelor’s degree</option>
+          <option value="bachelor2">2nd year Bachelor’s degree</option>
+          <option value="bachelor3">3rd year Bachelor’s degree</option>
+          <option value="master1">1st year Master’s degree</option>
+          <option value="master2">2nd year Master’s degree</option>
+          <option value="doctorate">Doctorate</option>
+          <option value="other">Other</option>
+        </select>
+      ) : (
+        <input
+          type="text"
+          className="select2"
+          placeholder="Enter your level of study"
+          value={customLevel}
+          onChange={(e) => setCustomLevel(e.target.value)}
+          required
+        />
+      )}
+    </div>
+            
+          </div>
+
+          <textarea  className="role2"
+              required 
+              type='role' 
+              placeholder="Have you ever joined a club? if yes Specify name and role."
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              disabled={isSubmitting}
+            />
+
           
-          <select 
+
+          <select className="select1"
             required
             value={department}
             onChange={(e) => setDepartment(e.target.value)}
             disabled={isSubmitting}
           >
-            <option value="" disabled hidden>Select your choice</option>
+            <option value="" disabled hidden>Choose your Departement</option>
             <option value="dev">Dev</option>
             <option value="design">Design</option>
-            <option value="hr">human resources</option>
-            <option value="events">Events</option>
+            <option value="hr">Human resources</option>
+            <option value="events">Marketing</option>
+            <option value="events">External relations</option>
           </select>
           
           <textarea 
             required 
-            placeholder="say something"
+            placeholder="What motivate you to join us"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             disabled={isSubmitting}

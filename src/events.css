@@ -21,18 +21,42 @@
 }
 
 .event-wrapper.left {
-  justify-content: flex-start;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap:300px;
+}
+
+.riglli{
+  height:100px;
+  width:100px;
 }
 
 .event-wrapper.right {
-  justify-content: flex-end;
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  gap:300px;
+  margin-right:110px;
+}
+
+.event-wrapper.left img{
+  height:200px;
+  width:200px;
+}
+
+.event-wrapper.right img{
+  height: 200px;
+  width:200px;
 }
 
 .event-card {
   height: 340px;
   width: 450px;
   max-width: 90vw;
-  background-color: #5286AE;
+  background-color:transparent;
   border-radius: 70px;
   display: flex;
   flex-direction: column;
@@ -55,11 +79,38 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   line-height: 1.4;
-  width: 270px;
+  width: 320px;
   max-width: 100%;
   height: auto;
   min-height: 140px;
   text-align: center;
+}
+
+.yawedi{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:0px;
+}
+
+.yawedi button{
+  height:50px;
+  width:180px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 15px;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.yawedi button:hover{
+  background-color: transparent;
+  color:white;
+  border: solid;
+  transition: 1s;
+  cursor: pointer;
 }
 
 .event-card h3 {
@@ -91,127 +142,6 @@
   }
 }
 
-/* Tablet Styles - 768px to 1024px */
-@media screen and (max-width: 1024px) {
-  .events-container {
-    padding: 1.5rem;
-  }
-  
-  .event-card {
-    width: 400px;
-    height: 320px;
-  }
-  
-  .event-card h3 {
-    font-size: 22px;
-  }
-  
-  .event-card p {
-    font-size: 16px;
-    width: 250px;
-    min-height: 120px;
-  }
-}
-
-/* Mobile Landscape - 568px to 767px */
-@media screen and (max-width: 767px) {
-  .events-container {
-    padding: 1rem;
-  }
-  
-  .events-grid {
-    gap: 1.5rem;
-  }
-  
-  .event-wrapper.left,
-  .event-wrapper.right {
-    justify-content: center;
-  }
-  
-  .event-card {
-    width: 350px;
-    height: 300px;
-    border-radius: 50px;
-  }
-  
-  .event-card h3 {
-    font-size: 20px;
-  }
-  
-  .event-card p {
-    font-size: 15px;
-    width: 220px;
-    min-height: 110px;
-  }
-  
-  .event-card small {
-    font-size: 13px;
-  }
-}
-
-/* Mobile Portrait - 320px to 567px */
-@media screen and (max-width: 567px) {
-  .events-container {
-    padding: 0.5rem;
-    margin-top: 100px;
-  }
-  
-  .events-grid {
-    gap: 1rem;
-  }
-  
-  .event-card {
-    width: 280px;
-    height: 280px;
-    border-radius: 40px;
-    padding: 1rem;
-  }
-  
-  .event-card h3 {
-    font-size: 18px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .event-card p {
-    font-size: 14px;
-    line-height: 1.3;
-    width: 200px;
-    min-height: 100px;
-  }
-  
-  .event-card small {
-    font-size: 12px;
-    margin-top: 0.5rem;
-  }
-}
-
-/* Extra Small Mobile - 320px and below */
-@media screen and (max-width: 320px) {
-  .events-container {
-    padding: 0.25rem;
-  }
-  
-  .event-card {
-    width: 260px;
-    height: 260px;
-    border-radius: 35px;
-  }
-  
-  .event-card h3 {
-    font-size: 16px;
-  }
-  
-  .event-card p {
-    font-size: 13px;
-    width: 180px;
-    min-height: 90px;
-  }
-  
-  .event-card small {
-    font-size: 11px;
-  }
-}
-
 .event-card {
   opacity: 0;
   transform: translateY(80px) rotateZ(5deg);
@@ -235,5 +165,269 @@
   100% {
     opacity: 1;
     transform: translateY(0) rotateZ(0deg);
+  }
+}
+
+/* Tablet Styles - 768px to 1024px */
+@media screen and (max-width: 1024px) {
+  .events-container {
+    padding: 1.5rem 1rem;
+    margin-top: 60px;
+  }
+  
+  .event-wrapper.left,
+  .event-wrapper.right {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    gap: 30px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  .event-wrapper.left img,
+  .event-wrapper.right img {
+    height: 150px;
+    width: 150px;
+    margin: 0;
+  }
+  
+  .events-grid {
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .yawedi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    order: 2; /* Image and button appear after card */
+  }
+  
+  .event-card {
+    width: 380px;
+    height: 320px;
+    padding: 1.2rem;
+    order: 1; /* Card appears first */
+  }
+  
+  .event-card h3 {
+    font-size: 22px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .event-card p {
+    font-size: 15.5px;
+    width: 280px;
+    min-height: 110px;
+    line-height: 1.4;
+  }
+  
+  .yawedi button {
+    height: 46px;
+    width: 170px;
+    font-size: 12.5px;
+  }
+}
+
+/* Mobile Landscape - 480px to 767px */
+@media screen and (max-width: 768px) {
+  .events-container {
+    padding: 1rem 0.8rem;
+    margin-top: 50px;
+  }
+  
+  .events-grid {
+    align-items: center;
+  }
+  
+  .event-wrapper.left,
+  .event-wrapper.right {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    gap: 25px !important;
+    margin: 0 auto !important;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .event-wrapper.left img,
+  .event-wrapper.right img {
+    height: 140px;
+    width: 140px;
+    margin: 0;
+  }
+  
+  .yawedi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    order: 2; /* Image and button appear after card */
+  }
+  
+  .event-card {
+    width: 320px;
+    height: 280px;
+    border-radius: 45px;
+    padding: 1.2rem;
+    order: 1; /* Card appears first */
+    margin: 0 auto;
+  }
+  
+  .event-card h3 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-card p {
+    font-size: 14.5px;
+    width: 280px;
+    min-height: 100px;
+    line-height: 1.4;
+  }
+  
+  .yawedi button {
+    height: 44px;
+    width: 160px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile Portrait - 376px to 479px */
+@media screen and (max-width: 567px) {
+  .events-container {
+    padding: 0.5rem 0.5rem;
+    margin-top: 40px;
+  }
+  
+  .events-grid {
+    align-items: center;
+  }
+  
+  .event-wrapper.left,
+  .event-wrapper.right {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    gap: 20px !important;
+    margin: 0 auto !important;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .event-wrapper.left img,
+  .event-wrapper.right img {
+    height: 130px;
+    width: 130px;
+    margin: 0;
+  }
+  
+  .yawedi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    order: 2; /* Image and button appear after card */
+  }
+  
+  .event-card {
+    width: 290px;
+    height: 260px;
+    border-radius: 35px;
+    padding: 1rem 0.8rem;
+    order: 1; /* Card appears first */
+    margin: 0 auto;
+  }
+  
+  .event-card h3 {
+    font-size: 18px;
+    margin-bottom: 0.4rem;
+  }
+  
+  .event-card p {
+    font-size: 13.5px;
+    line-height: 1.35;
+    width: 250px;
+    min-height: 90px;
+  }
+  
+  .yawedi button {
+    height: 42px;
+    width: 150px;
+    font-size: 11.5px;
+  }
+}
+
+/* Small Mobile - 320px to 375px */
+@media screen and (max-width: 375px) {
+  .events-container {
+    padding: 0.5rem 0.3rem;
+    margin-top: 30px;
+  }
+  
+  .events-grid {
+    align-items: center;
+  }
+  
+  .event-wrapper.left,
+  .event-wrapper.right {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    gap: 18px !important;
+    margin: 0 auto !important;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .event-wrapper.left img,
+  .event-wrapper.right img {
+    height: 120px;
+    width: 120px;
+    margin: 0;
+  }
+  
+  .yawedi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    order: 2; /* Image and button appear after card */
+  }
+  
+  .event-card {
+    width: 270px;
+    height: 250px;
+    border-radius: 30px;
+    padding: 0.8rem 0.6rem;
+    order: 1; /* Card appears first */
+    margin: 0 auto;
+  }
+  
+  .event-card h3 {
+    font-size: 17px;
+    margin-bottom: 0.3rem;
+  }
+  
+  .event-card p {
+    font-size: 13px;
+    line-height: 1.3;
+    width: 240px;
+    min-height: 85px;
+  }
+  
+  .yawedi button {
+    height: 40px;
+    width: 140px;
+    font-size: 11px;
+    border-radius: 15px;
+  }
+  
+  .event-card small {
+    font-size: 11px;
+    margin-top: 0.2rem;
   }
 }

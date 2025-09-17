@@ -59,6 +59,7 @@
     font-family: 'Montserrat' , sans-serif;
     line-height: auto;
     font-size: 12;
+    font-weight: bold;
 } 
 .left button:hover p{
     color: #ffffff;
@@ -69,6 +70,26 @@
     transform: translateY(-3px);
     border: solid white;
 }
+
+.home.ltr {
+display: flex;
+flex-direction: row;
+justify-content: space-around ;
+align-items: center;
+gap: 100px;
+}
+.ihhh{
+    height:80px;
+    width:400px;
+    font-size: 22px;
+}
+.arab{
+    font-size: 40px;
+}
+
+
+
+
 
 /* Responsive Styles - Only affects screens smaller than desktop */
 @media screen and (max-width: 1200px) {

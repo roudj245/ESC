@@ -12,8 +12,9 @@ function Home2(){
                 <div className='black'>
                     <Section
                     title1="Pay Us a Visit"
-                    description="centre ville cherchell"
+                    description="Our local"
                     image={pic3}
+                    link = 'https://maps.app.goo.gl/Q6BbwxW6MP51H92g6?g_st=ipc'
                     />
                     <Section
                     title1="Give Us a Call"

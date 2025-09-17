@@ -1,8 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
+
 .navbar{
     height: 100px;
     width : 100%;
@@ -15,15 +16,24 @@ html {
     position: relative;
     z-index: 100;
 }
+
+/* RTL support for Arabic */
+.navbar.rtl {
+    direction: rtl;
+}
+
+.navbar.rtl .sections {
+    margin-left: 0;
+    margin-right: 100px;
+}
+
 .buttons a{
     text-decoration: none;
-
 }
+
 .sections a:hover{
     color: #5286AE;
-    
 }
-
 
 .sections{
     display: flex;
@@ -33,27 +43,31 @@ html {
     gap:20px;
     margin-left: 100px;
 }
+
 .sections a{
     font-family: 'Montserrat' , sans-serif;
     color:white;
     text-decoration: none;
 }
+
 .logo{
     display: flex;
     flex-direction: row;
-    gap:10px;
+    gap:0px;
 }
+
 .logo p{ 
     color: white;
     font-family: 'League Spartan' , sans-serif;
+    margin-top:42px;
 }
 
 .buttons{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
 }
-
 
 .contact{
     height: 45.5px;
@@ -67,15 +81,18 @@ html {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .contact p{
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-weight: bold;
 }
+
 .contact:hover{
     background-color: white;
     transform: translateY(-3px); 
 }
+
 .contact:hover p{
     color: #000000; 
 }
@@ -92,30 +109,31 @@ html {
     cursor: pointer;
     transition: all 0.3s ease; 
 }
+
 .join p{
     font-family: 'Montserrat', sans-serif;
     color: #000000;
     font-weight: bold;
 }
+
 .join:hover{
     background-color: transparent; 
     transform: translateY(-3px); 
 }
+
 .join:hover p{
     color: white; 
 }
 
 img {
-    height: 50px;
-    width:50px;
+    height: 90px;
+    width:90px;
 }
-
 
 .menu-icon {
     display: none;
     cursor: pointer;
 }
-
 
 .sidebar {
     position: fixed;
@@ -138,6 +156,17 @@ img {
 }
 
 
+.sidebar.rtl {
+    right: auto;
+    left: -100%;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.5);
+}
+
+.sidebar.rtl.open {
+    left: 0;
+    right: auto;
+}
+
 .close-btn {
     position: absolute;
     top: 20px;
@@ -147,11 +176,15 @@ img {
     color:white;
     padding: 15px 18px;
 }
-.close-btn:hover {
-    transform: rotate(90deg);
 
+.sidebar.rtl .close-btn {
+    left: auto;
+    right: 0px;
 }
 
+.close-btn:hover {
+    transform: rotate(90deg);
+}
 
 .sidebar a {
     color: white;
@@ -167,6 +200,12 @@ img {
     background-color: rgba(255, 255, 255, 0.1);
     padding-left: 25px; 
 }
+
+.sidebar.rtl .secs a:hover {
+    padding-left: 15px;
+    padding-right: 25px;
+}
+
 .secs{
     display:flex;
     flex-direction: column;
@@ -175,6 +214,9 @@ img {
     gap:10px;
 }
 
+.sidebar.rtl .secs {
+    align-items: end;
+}
 
 .sidebar button {
     width: 100%;
@@ -183,20 +225,58 @@ img {
     font-size: 16px;
     transition: all 0.3s ease;
 }
+
 .sidebar button:hover {
     transform: translateY(-3px);
 }
 
 
+.lang-btn {
+  height: 45.5px;
+  width: 80px;
+  border-radius: 40px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
 
+.lang-btn:hover {
+  transform: translateY(-3px);
+}
 
+/* Mobile responsive */
 @media (max-width: 768px) {
     .sections,
-    .buttons {
+    .buttons .contact,
+    .buttons .join {
         display: none;
     }
+    
+    .buttons {
+        display: flex;
+    }
+    
     .menu-icon {
         display: block;
         margin-left: 240px;
+    }
+    
+    .navbar.rtl .menu-icon {
+        margin-left: 0;
+        margin-right: 240px;
+    }
+    
+    .logo {
+        margin-left: -20px;
+    }
+    
+    .navbar.rtl .logo {
+        margin-left: 0;
+        margin-right: -20px;
     }
 }

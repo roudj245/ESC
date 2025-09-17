@@ -1,14 +1,13 @@
 import './section.css'
 
 
-function Section({title1 , description , image}){
+function Section({title1 , description , image , link}){
     return(
     <div className='section'>
         <img src={image} alt={title1}></img>
             <div className='texts'>
                 <h2>{title1}</h2>
-                <p>{description}</p>
-
+                <a href ={link}><p>{description}</p></a>
             </div>
 
     </div>

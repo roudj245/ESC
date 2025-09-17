@@ -13,8 +13,8 @@
 
 
 .about img {
-    height: 470px;
-    width: 440px;
+    height: 380px;
+    width: 380px;
     opacity: 0; 
     transform: translateX(-50px);
     animation: slideFadeIn 1s ease forwards;
@@ -75,14 +75,22 @@
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
     animation-delay: 0.4s; 
+    color:black;
 }
 
 .about button p{
     font-family: 'Montserrat' , sans-serif;
     font-size: 12px;
     font-weight: bold;
-    color: black;
     
+}
+.about button:hover{
+    background-color: transparent;
+    border: solid;
+    color:white;
+}
+.about button p:hover{
+    color: white;
 }
 
 

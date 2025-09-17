@@ -8,20 +8,65 @@ import 'swiper/css/navigation';
 const members4 = [
   {
     place: "President",
-    avatar: require('./assets/moundhir.jpg'),
-    name: "Mouloudi El-Moundhir",
-    role: "Second year student at ESI Algiers",
-    skills: ["Full Stack Developer", "UI / UX designer"],
-    experience: "Over 3 Years of experience"
+    avatar: require('./assets/didine.JPEG'),
+    name: "PRESIDENT",
+    role: "Nejm Eddine Ben Mekhlouf",
+    skills: ["4th year student of" , "member of جمعية العلماء المسلمين" ,],
+    experience: "Over 2 Years of experience"
   },
   {
     place: 'Vice President',
     avatar: require('./assets/pic3.jpg'),
-    name: "Mouloudi El-Moundhir",
-    role: "Third year student at ESI Algiers",
-    skills: ["UI / UX designer", "Backend Developer"],
-    experience: "2 Years of experience"
+    name: "VICE PRESIDENT",
+    role: "Hamza Abdelaziz Dia",
+    skills: ["member of جمعية العلماء المسلمين", "4th year student at ENSIA" ,"ex president of Ensia Tech Community"],
   },
+  {
+    place: "leader",
+    avatar: require('./assets/malek.webp'),
+    name: "DESIGN AND HR MANAGER",
+    role: "Malek Oumouna",
+    skills: [ "member of جمعية العلماء المسلمين" , "4th Year student at ENSTP", "Graphic Designer"],
+  },
+  
+  {
+    place: "leader",
+    avatar: require('./assets/raouf.jpg'),
+    name: "FINANCE AND RELEX MANAGER",
+    role: "Souilamas Abderaouf",
+    skills: ["3rd year student of Process engineering", "Speaks English and French fluently"],
+    experience: "Over 2 Years of experience"
+  },
+  {
+    place: "leader",
+    avatar: require('./assets/DSC02902.JPG'),
+    name: "DEV MANAGER",
+    role: "Roudj Abdelghani",
+    skills: ["Second year student at ESI Algiers","member of جمعية العلماء المسلمين","Front end Developer"],
+  },
+  {
+    place: "leader",
+    avatar: require('./assets/mohaa.jpg'),
+    name: "MARKETING AND MEDIA MANAGER",
+    role: "Mohammed Maddi",
+    skills: ["Second year Student at ENP Algiers", "member of جمعية العلماء المسلمين" ,"Excellent at communicating",],
+  },
+  {
+    place: "leader",
+    avatar: require('./assets/profile2.png'),
+    name: "PLANING MANAGER",
+    role: "Dahel Iheb",
+    skills: ["5th year student at ENSTP", "Ex president of "],
+    experience: "Over 3 Years of experience"
+  },
+  {
+    place: "leader",
+    avatar: require('./assets/pic2.JPG'),
+    name: "VIDEO EDITING MANAGER",
+    role: "Belmiloud Iyed",
+    skills: ["master 1 student of Artificial intelligence", "member of جمعية العلماء المسلمين"],
+  },
+
 ];
 
 function Card1({ item }) {
