@@ -26,7 +26,7 @@ export default function Footer() {
               <a href ='#leaders'><p>LEADERS</p></a>
               <a href ='#departement'><p>DEPARTEMENT</p></a>
               <a href = '#events'><p>UP-EVENTS</p></a>
-              <a href ='#register'><p>JOIN ESC</p></a>
+              <a href ='https://registrationesc.vercel.app/'target="_blank" rel="noopener noreferrer"><p>JOIN ESC</p></a>
             </div>
           </li>
 
@@ -40,7 +40,7 @@ export default function Footer() {
               <a href="https://www.instagram.com/epstimi.signum/" target="_blank" rel="noopener noreferrer"><img src={insta} alt="instagram" /></a>
               <a href="https://www.tiktok.com/@esc_club?_t=ZS-8zhVFvEDsls&_r=1" target="_blank" rel="noopener noreferrer"><img src={tik} alt="tiktok" /></a>
             </div>
-            <a href ='#register'><p id="boutton">REGiSTER</p> </a>
+            <a href ='https://registrationesc.vercel.app/'target="_blank" rel="noopener noreferrer"><p id="boutton">REGiSTER</p> </a>
           </li>
         </ul>
       </footer>

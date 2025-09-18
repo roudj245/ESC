@@ -18,7 +18,7 @@ function Home2(){
                     />
                     <Section
                     title1="Give Us a Call"
-                    description="0553314664" 
+                    description="05 54034581" 
                     image={pic2}
                     />
                     <Section

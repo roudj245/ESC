@@ -8,8 +8,6 @@ import { useLanguage } from './LanguageContext.js';
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const { language, toggleLanguage } = useLanguage();
-
-    // Language content object
     const content = {
         EN: {
             home: 'HOME',
@@ -56,7 +54,7 @@ function Navbar() {
                     </button>
                 </a>
                 
-                <a href='#register'>
+                <a href='https://registrationesc.vercel.app/' target='_blank'  rel="noopener noreferrer">
                     <button className='join'>
                         <p>{currentContent.join}</p>
                     </button>
@@ -73,7 +71,7 @@ function Navbar() {
                     <a href='#about'>{currentContent.about}</a>
                     <a href='#leaders'>{currentContent.leaders}</a>
                     <a href='#departement'>{currentContent.departments}</a>
-                    <a href='#event'>{currentContent.events}</a>
+                    <a href='#events'>{currentContent.events}</a>
                 </div>
                 
                 
@@ -83,7 +81,7 @@ function Navbar() {
                     </button>
                 </a>
                 
-                <a href='#register'>
+                <a href='https://registrationesc.vercel.app/' target='_blank'  rel="noopener noreferrer">
                     <button className='join'>
                         <p>{currentContent.join}</p>
                     </button>

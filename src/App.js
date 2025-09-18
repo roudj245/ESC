@@ -83,7 +83,7 @@ const rio5 = [
     avatar: require('./assets/profile2.png'),
     name: "Dehal Iheb",
     role: "4th year student at ENSTP",
-    skills: ["Graphic Designer", "Ex president of "],
+    skills: ["Graphic Designer", "Ex president of LTP "],
     experience: "Over 3 Years of experience"
   },
   
@@ -200,7 +200,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
 />
 
 <Departement2 
-  title3='Human Resources Departement' 
+  title3='HR Departement' 
   description3={
     <>
       The Human Resources Department manages people, teamwork, and communication. 
@@ -273,7 +273,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   title3='Media Management Department' 
   description3={
     <>
-    The Media Management Department manages creativity, design, and innovation. They create visuals that capture the club’s identity. Multimedia develops graphics, branding, and digital campaigns. The department builds skills in art, technology, and storytelling. Their mission is to make ideas inspiring and impactful.
+  The Media Management Department focuses on organizing, planning, and overseeing all media-related activities within an organization. It ensures effective communication through digital platforms, social media, publications, and audiovisual content. The department manages branding strategies, media campaigns, and public relations to enhance visibility and engagement.
     </>
   }
   image3={event}

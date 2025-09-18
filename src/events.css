@@ -103,7 +103,12 @@
   font-family: 'Montserrat',sans-serif;
   font-size: 13px;
   font-weight: bold;
+  
 }
+.yawedi a{
+  text-decoration: none;
+}
+
 
 .yawedi button:hover{
   background-color: transparent;
@@ -111,7 +116,9 @@
   border: solid;
   transition: 1s;
   cursor: pointer;
+  text-decoration: none;
 }
+
 
 .event-card h3 {
   font-family: 'Montserrat', sans-serif;
@@ -266,6 +273,9 @@
     align-items: center;
     gap: 12px;
     order: 2; /* Image and button appear after card */
+  }
+  .yawedi button p{
+    font-size: 12px;
   }
   
   .event-card {

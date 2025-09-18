@@ -92,6 +92,9 @@
 .about button p:hover{
     color: white;
 }
+.about a{
+    text-decoration: none;
+}
 
 
 

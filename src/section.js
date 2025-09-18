@@ -7,7 +7,7 @@ function Section({title1 , description , image , link}){
         <img src={image} alt={title1}></img>
             <div className='texts'>
                 <h2>{title1}</h2>
-                <a href ={link}><p>{description}</p></a>
+                <a href ={link} target="_blank" rel="noopener noreferrer"><p>{description}</p></a>
             </div>
 
     </div>

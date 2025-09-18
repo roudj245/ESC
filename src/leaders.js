@@ -6,7 +6,7 @@ const members4 = [
     place: "President",
     avatar: require('./assets/didine.JPEG'),
     name: "Nejm Eddine Ben Mekhlouf ",
-    role: "4th year student of ",
+    role: "4th year student of Process engineering",
     skills: ["member of جمعية العلماء المسلمين"],
     experience: "Over 2 Years of experience"
   },

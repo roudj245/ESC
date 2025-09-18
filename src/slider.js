@@ -11,7 +11,7 @@ const members4 = [
     avatar: require('./assets/didine.JPEG'),
     name: "PRESIDENT",
     role: "Nejm Eddine Ben Mekhlouf",
-    skills: ["4th year student of" , "member of جمعية العلماء المسلمين" ,],
+    skills: ["4th year student of Process engineering" , "member of جمعية العلماء المسلمين"],
     experience: "Over 2 Years of experience"
   },
   {
@@ -42,7 +42,7 @@ const members4 = [
     avatar: require('./assets/DSC02902.JPG'),
     name: "DEV MANAGER",
     role: "Roudj Abdelghani",
-    skills: ["Second year student at ESI Algiers","member of جمعية العلماء المسلمين","Front end Developer"],
+    skills: ["Second year student at ESI Algiers","member of جمعية العلماء المسلمين","Frontend Developer"],
   },
   {
     place: "leader",
@@ -56,7 +56,7 @@ const members4 = [
     avatar: require('./assets/profile2.png'),
     name: "PLANING MANAGER",
     role: "Dahel Iheb",
-    skills: ["5th year student at ENSTP", "Ex president of "],
+    skills: ["5th year student at ENSTP", "Ex president of LTP"],
     experience: "Over 3 Years of experience"
   },
   {
