@@ -35,7 +35,7 @@ const rio = [
   },
   {
     place: "co-leader",
-    avatar: require('./assets/profile2.png'),
+    avatar: require('./assets/jalil.jpg'),
     name: "Merzougui Abdeljalil",
     role: "Second year student at ESI Algiers",
     skills: [" Backend Developer", "UI / UX designer"],
@@ -240,7 +240,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   data3={rio4}
 />
 <Departement 
-  title2='Planing Departement' 
+  title2='Planning Departement' 
   description2={
     <>
     The Planning Department manages events, schedules, and logistics. They design strategies to achieve goals effectively. Planning ensures organization, coordination, and smooth execution. The department builds skills in leadership, problem-solving, and foresight. Their mission is to turn vision into successful reality.
