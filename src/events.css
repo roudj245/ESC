@@ -51,10 +51,15 @@
   height: 200px;
   width:200px;
 }
-.yawedi button p{
-  color:black;
-}
 
+.yawedi button:hover{
+  color:white;
+
+
+}
+.yawedi button p:hover{
+  color:white;
+}
 .event-card {
   height: 340px;
   width: 450px;
@@ -117,7 +122,6 @@
   background-color: transparent;
   color:white;
   border: solid;
-  transition: 1s;
   cursor: pointer;
   text-decoration: none;
 }
@@ -279,7 +283,6 @@
   }
   .yawedi button p{
     font-size: 12px;
-    color: black;
   }
   
   .event-card {
