@@ -27,7 +27,7 @@ function Leaders(){
         <div id ='leaders'className='leaders'>
             <p className='lider'>OUR LEADERS</p>
                 <Card data={members4} />
-            <p className='lider'>DEPARTEMENTS</p>
+            <p className='lider'>DEPARTMENTS</p>
            
 
         </div>

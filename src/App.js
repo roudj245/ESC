@@ -30,8 +30,8 @@ const rio = [
     avatar: require('./assets/DSC02902.JPG'),
     name: "Roudj Abdelghani",
     role: "Second year student at ESI Algiers",
-    skills: ["Front end Developer","member of جمعية العلماء المسلمين"],
-    experience: "2 Year of experience"
+    skills: ["Frontend Developer","member of جمعية العلماء المسلمين"],
+    experience: "2 Years of experience"
   },
   {
     place: "co-leader",
@@ -39,7 +39,7 @@ const rio = [
     name: "Merzougui Abdeljalil",
     role: "Second year student at ESI Algiers",
     skills: [" Backend Developer", "UI / UX designer"],
-    experience: "2 Year of experience"
+    experience: "2 Years of experience"
   },
   
 ];
@@ -168,7 +168,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   {!isMobile && <Leaders/>} 
   
   <div id ="departement">
-    {isMobile && <p className='lider'>DEPARTEMENTS</p>}
+    {isMobile && <p className='lider'>DEPARTMENTS</p>}
   <Departement2 
   title3='DEV Department' 
   description3={
