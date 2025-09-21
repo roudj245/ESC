@@ -170,7 +170,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   <div id ="departement">
     {isMobile && <p className='lider'>DEPARTEMENTS</p>}
   <Departement2 
-  title3='DEV Departement' 
+  title3='DEV Department' 
   description3={
     <>
       The Development Department builds and maintains digital projects. 
@@ -185,7 +185,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
 />
 
 <Departement
-  title2='DESIGN Departement' 
+  title2='DESIGN Department' 
   description2={
     <>
       The Design Department focuses on visuals, branding, and identity. 
@@ -200,7 +200,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
 />
 
 <Departement2 
-  title3='HR Departement' 
+  title3='HR Department' 
   description3={
     <>
       The Human Resources Department manages people, teamwork, and communication. 
@@ -215,7 +215,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
 />
 
 <Departement
-  title2='RELEX Deparetemnt' 
+  title2='RELEX Departemnt' 
   description2={
     <>
       The external relations Department builds partnerships with sponsors and firms. 
@@ -230,7 +230,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
 />
 
 <Departement2 
-  title3='Marketing Departement' 
+  title3='Marketing Department' 
   description3={
     <>
     The marketing department promotes the club’s vision and activities. They design campaigns, create content, and manage social media. Members develop communication, creativity, and teamwork skills. Each campaign is crafted to inspire and engage the audience. Marketing builds visibility, strengthens the club’s image, and connects it with the community.
@@ -240,7 +240,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   data3={rio4}
 />
 <Departement 
-  title2='Planning Departement' 
+  title2='Planning Department' 
   description2={
     <>
     The Planning Department manages events, schedules, and logistics. They design strategies to achieve goals effectively. Planning ensures organization, coordination, and smooth execution. The department builds skills in leadership, problem-solving, and foresight. Their mission is to turn vision into successful reality.
@@ -250,7 +250,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   data2={rio5}
 />
 <Departement2 
-  title3='Video Editing Departement' 
+  title3='Video Editing Department' 
   description3={
     <>
   The Video Editing Department manages stories, visuals, and sound. They turn raw footage into engaging and professional content. Video editors shape projects with creativity, precision, and style. The department builds skills in editing, effects, and communication. Their mission is to bring moments to life through film.
@@ -260,7 +260,7 @@ Our mission is to transform curiosity into knowledge and knowledge into impactfu
   data3={rio7}
 />
 <Departement 
-  title2='Finance Departement' 
+  title2='Finance Department' 
   description2={
     <>
   The Finance Department manages budgets, resources, and expenses. They track all financial activities and ensure transparency. Finance plans fundraising, sponsorships, and sustainable growth. The department builds skills in management, strategy, and responsibility. Their mission is to secure stability and future success.

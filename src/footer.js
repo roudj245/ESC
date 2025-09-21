@@ -24,7 +24,7 @@ export default function Footer() {
               <a href ='#home'><p>HOME</p></a>
               <a href ='#about' ><p>ABOUT</p></a>
               <a href ='#leaders'><p>LEADERS</p></a>
-              <a href ='#departement'><p>DEPARTEMENT</p></a>
+              <a href ='#departement'><p>DEPARTMENTS</p></a>
               <a href = '#events'><p>UP-EVENTS</p></a>
               <a href ='https://registrationesc.vercel.app/'target="_blank" rel="noopener noreferrer"><p>JOIN ESC</p></a>
             </div>

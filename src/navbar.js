@@ -13,7 +13,7 @@ function Navbar() {
             home: 'HOME',
             about: 'ABOUT',
             leaders: 'LEADERS',
-            departments: 'DEPARTEMENTS',
+            departments: 'DEPARTMENTS',
             events: 'UP-EVENTS',
             contact: 'CONTACT US',
             join: 'JOIN ESC'
