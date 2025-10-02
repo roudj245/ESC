@@ -17,7 +17,7 @@ html {
     z-index: 100;
 }
 
-/* RTL support for Arabic */
+
 .navbar.rtl {
     direction: rtl;
 }
@@ -278,5 +278,8 @@ img {
     .navbar.rtl .logo {
         margin-left: 0;
         margin-right: -20px;
+    }
+    .navbar{
+        position: fixed;
     }
 }

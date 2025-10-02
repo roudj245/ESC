@@ -115,7 +115,10 @@ gap: 100px;
     .left h1 {
         font-size: 36px;
     }
-    
+    .navbar{
+        background-color: rgb(0, 0, 0);
+        height:70px;
+    }
     .left p {
         font-size: 14px;
     }
@@ -136,6 +139,10 @@ gap: 100px;
 @media screen and (max-width: 480px) {
     .left h1 {
         font-size: 28px;
+    }
+    .navbar{
+        background-color: rgb(0, 0, 0);
+        height:65px;
     }
     
     .left p {
