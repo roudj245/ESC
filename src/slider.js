@@ -46,7 +46,7 @@ const members4 = [
   },
   {
     place: "leader",
-    avatar: require('./assets/mohaa.jpg'),
+    avatar: require('./assets/mohaaa.jpg'),
     name: "MARKETING AND MEDIA MANAGER",
     role: "Mohammed Maddi",
     skills: ["Second year Student at ENP Algiers", "member of جمعية العلماء المسلمين" ,"Excellent at communicating",],
