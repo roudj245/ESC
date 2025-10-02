@@ -69,7 +69,7 @@ const rio3 = [
 const rio4 = [
   {
     place: "leader",
-    avatar: require('./assets/mohaa.jpg'),
+    avatar: require('./assets/mohaaa.jpg'),
     name: "Mohammed Maddi",
     role: "Second year student at ENP Algiers",
     skills: ["Excellent at communicating", "member of جمعية العلماء المسلمين"],

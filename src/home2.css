@@ -49,13 +49,13 @@
     animation: pulse-glow 2s infinite alternate;
 }
 
-/* Responsive styles - only affects screens smaller than 1200px */
+
 @media screen and (max-width: 1200px) {
     .home2 {
         height: auto;
         padding: 1rem 1rem;
         margin-top: 50px;
-          
+        
     }
     
     .white, .black {
@@ -75,7 +75,7 @@
     }
 }
 
-/* Tablet styles */
+
 @media screen and (max-width: 768px) {
     .home2 {
         margin-top: 30px;
