@@ -89,7 +89,6 @@ const members4 = [
     name: "DEV CO-MANAGER",
     role: "Merzougui Abdeljalil",
     skills: ["Second year student at ESI Algiers","UI/UX Designer","Backend Developer"],
-    experience: "Over 2 Years of experience"
 
   },
 
@@ -99,7 +98,7 @@ const members4 = [
     avatar: require('./assets/mohaaa.jpg'),
     name: " MEDIA-COM MANAGER",
     role: "Maddi Mohammed",
-    skills: ["Second year Student at ENP Algiers", "member of جمعية العلماء المسلمين" ,"Excellent at communicating",],
+    skills: ["Second year Student at ENP Algiers", "member of جمعية العلماء المسلمين" ],
   },
   {
     place: "leader",

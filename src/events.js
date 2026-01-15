@@ -57,7 +57,7 @@ return (
 function UpcomingEvents() {
 return (
 <div id ='events' className="events-container">
-    <h2 className='lider'>Our events</h2>
+    <h2 className='lider'>OUR EVENTS</h2>
     <div className="events-grid">
     {events.map((event, i) => (
         <div key={i} className={`event-wrapper ${i % 2 === 0 ? "left" : "right"} card-${i}`}>
