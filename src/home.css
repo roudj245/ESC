@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
 
 .home{
-    height:400px;
+    height:360px;
     width:100%;
     display: flex;
     flex-direction: row;
@@ -34,17 +34,21 @@
 }
 .home img{
     margin-right: 50px;
-    height:430.86px;
-    width: 490px;
-    margin-top: 140px;
-    border-radius: 80px;
-    border-bottom-left-radius: 240px;
+    max-width: 550px;
+    width: 100%;
+    height:360px;
+    margin-top: 130px;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    object-fit: cover;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .left h1{
     color:white;
     font-family: 'Montserrat' , sans-serif;
     font-weight: bold;
-    font-size: 46;
+    font-size: 43px;
     line-height: auto;
 
 }
@@ -176,9 +180,6 @@ gap: 100px;
 }
 
 
-.home img {
-    animation: floatImage 3s ease-in-out infinite alternate;
-}
 
 @keyframes floatImage {
     0% { transform: translateY(0); }

@@ -3,6 +3,7 @@ import logo from './assets/without-bg-06.png'
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from './LanguageContext.js';
+import { Link } from 'react-router-dom'
 
 
 function Navbar() {
@@ -54,11 +55,11 @@ function Navbar() {
                     </button>
                 </a>
                 
-                <a href='https://registrationesc.vercel.app/' target='_blank'  rel="noopener noreferrer">
+                <Link to="/register">
                     <button className='join'>
                         <p>{currentContent.join}</p>
                     </button>
-                </a>
+                </Link>
             </div>
 
             <div className='menu-icon' onClick={() => setIsOpen(!isOpen)}>
@@ -81,11 +82,11 @@ function Navbar() {
                     </button>
                 </a>
                 
-                <a href='https://registrationesc.vercel.app/' target='_blank'  rel="noopener noreferrer">
+                <Link to="/register">
                     <button className='join'>
                         <p>{currentContent.join}</p>
                     </button>
-                </a>
+                </Link>
                 
                 <div className="close-btn" onClick={() => setIsOpen(false)}>
                     <X size={24} color="white" />

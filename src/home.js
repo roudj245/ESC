@@ -1,5 +1,6 @@
 import './home.css'
-import pic from './assets/ktab.png'
+import pic from './assets/lingua.webp'
+import { Link } from 'react-router-dom'
 
 
 function Home(){
@@ -8,10 +9,12 @@ function Home(){
         <div className='left'>
         <h1>Shaping the Future <br></br> Through Science</h1>
         <p>Join a community of curious minds passionate<br></br> about discovery, research, and innovation. Our club <br></br> is dedicated to exploring science through projects,<br></br> workshops, and collaboration.</p>
-        <a href ='https://registrationesc.vercel.app/' target="_blank" rel="noopener noreferrer"><button> 
-            <p>Register</p>
-        </button>
-        </a>
+        <Link to="/register">
+                <button> 
+                    <p>Register</p>
+                </button>
+            </Link>
+
 
         </div>
         <img src ={pic} alt =''></img>

@@ -23,49 +23,108 @@ const members4 = [
   },
   {
     place: "leader",
-    avatar: require('./assets/malek.webp'),
-    name: "DESIGN AND HR MANAGER",
-    role: "Malek Oumouna",
-    skills: [ "member of جمعية العلماء المسلمين" , "4th Year student at ENSTP", "Graphic Designer"],
+    avatar: require('./assets/ihebb.jpg'),
+    name: "GENERAL SECRETARY",
+    role: "Dahel Iheb",
+    skills: ["5th year student at ENSTP", "Ex president of LTP"],
+    experience: "Over 3 Years of experience"
+  },
+
+  
+  {
+    place: "leader",
+    avatar: require('./assets/tasnim.webp'),
+    name: "HUMAN RESOURCES MANAGER",
+    role: "Oudai Tasnim Ikram",
+    skills: ["Second year Student at ENP Algiers", "exellent at communicating"],
+  },
+
+
+  
+
+  {
+    place: "leader",
+    avatar: require('./assets/iheb2.jpg'),
+    name: "HUMAN RESOURCES CO-MANAGER",
+    role: "Dahel Yasmine",
+    skills: ["1st year of political science", "Speaks English and French fluently"],
   },
   
   {
     place: "leader",
     avatar: require('./assets/raouf.jpg'),
-    name: "FINANCE AND RELEX MANAGER",
+    name: "RELEX MANAGER",
     role: "Souilamas Abderaouf",
     skills: ["3rd year student of Process engineering", "Speaks English and French fluently"],
     experience: "Over 2 Years of experience"
   },
   {
     place: "leader",
-    avatar: require('./assets/DSC02902.JPG'),
-    name: "DEV MANAGER",
-    role: "Roudj Abdelghani",
-    skills: ["Second year student at ESI Algiers","member of جمعية العلماء المسلمين","Frontend Developer"],
+    avatar: require('./assets/najib.jpg'),
+    name: "FINANCE MANAGER",
+    role: "Birem Mohamed Nadjib",
+    skills: ["first year student of process engineering"],
+  },
+
+
+
+  {
+    place: "leader",
+    avatar: require('./assets/yasmine2.webp'),
+    name: "Design MANAGER",
+    role: "Ouzaghla Yasmine",
+    skills: ["Second year process engineering-INH", "Graphic/Blender Designer"],
   },
   {
     place: "leader",
+    avatar: require('./assets/DSC02902.JPG'),
+    name: "DEV MANAGER",
+    role: " Roudj Abdelghani ",
+    skills: ["Second year student at ESI Algiers","member of جمعية العلماء المسلمين","Frontend Developer"],
+  },
+  
+  {
+    place: "leader",
+    avatar: require('./assets/jalil.jpg'),
+    name: "DEV CO-MANAGER",
+    role: "Merzougui Abdeljalil",
+    skills: ["Second year student at ESI Algiers","UI/UX Designer","Backend Developer"],
+    experience: "Over 2 Years of experience"
+
+  },
+
+
+  {
+    place: "leader",
     avatar: require('./assets/mohaaa.jpg'),
-    name: "MARKETING AND MEDIA MANAGER",
-    role: "Mohammed Maddi",
+    name: " MEDIA-COM MANAGER",
+    role: "Maddi Mohammed",
     skills: ["Second year Student at ENP Algiers", "member of جمعية العلماء المسلمين" ,"Excellent at communicating",],
   },
   {
     place: "leader",
-    avatar: require('./assets/profile2.png'),
+    avatar: require('./assets/dhoha.jpg'),
+    name: " MARKETING MANAGER",
+    role: "Boukhatem Dhoha",
+    skills: ["Second year scientific high school student", "member of جمعية العلماء المسلمين"],
+  },
+
+
+  {
+    place: "leader",
+    avatar: require('./assets/safia.jpg'),
     name: "PLANING MANAGER",
-    role: "Dahel Iheb",
-    skills: ["5th year student at ENSTP", "Ex president of LTP"],
-    experience: "Over 3 Years of experience"
+    role: "Ghezal Safia",
+    skills: ["3rd year medical student","Excellent organizer", "Team leader"],
   },
   {
     place: "leader",
-    avatar: require('./assets/pic2.JPG'),
-    name: "VIDEO EDITING MANAGER",
-    role: "Belmiloud Iyed",
-    skills: ["master 1 student of Artificial intelligence", "member of جمعية العلماء المسلمين"],
+    avatar: require('./assets/malek.webp'),
+    name: "PRODUCTION MANAGER",
+    role: "Oumouna Abdelmalek",
+    skills: [ "4th Year student at ENSTP","Video Editer", "member of جمعية العلماء المسلمين" ],
   },
+  
 
 ];
 
