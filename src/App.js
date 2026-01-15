@@ -342,7 +342,7 @@ const [isMobile, setIsMobile] = useState(false);
         
         <Route path="/register" element={
           <>
-            <Closed/>
+            <Register/>
             <FooterRegister/>
           </>
         } />
